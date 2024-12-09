@@ -1,0 +1,215 @@
+:root {
+    --clr1: #283739;
+    --clr2: #2c5d63;
+    --clr3: #a2c11c;
+    --clr4: #e0e0e0;
+}
+
+.todo-container {
+    font-family: sans-serif;
+    background-color: var(--clr1);
+    padding: 0.8rem 2rem;
+    border: solid 2px var(--clr2);
+    border-radius: 10px;
+    margin: 1rem 0;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4),
+        0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 35vw;
+    max-width: 600px;
+    /* height: 90vh; */
+    overflow-y: auto;
+    gap: 1rem;
+    transition: all 0.5s
+}
+
+.todo-container>header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: solid 1px var(--clr2);
+    padding-bottom: 1rem;
+    /* background-color: var(--clr3); */
+}
+
+.todo-container>header h1 {
+    font-size: 2rem;
+    color: var(--clr4);
+    text-transform: uppercase;
+    color: var(--clr3);
+}
+
+.todo-container>header p {
+    color: var(--clr1);
+    background-color: var(--clr3);
+    opacity: 0.7;
+    padding: 0.2rem 1rem;
+    border-radius: 5px;
+}
+
+/* --------------------------------------- */
+.todo-form-container {
+    width: 100%;
+    /* background-color: aliceblue; */
+}
+
+.todo-form-container .todo-form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* background-color: #e0e0e0; */
+    width: inherit;
+}
+
+.todo-form>input {
+    padding: 10px;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #2c5d63e3;
+    color: #e0e0e0;
+
+    &::placeholder {
+        color: #e0e0e0a0;
+    }
+}
+
+.todo-form>button {
+    background-color: var(--clr3);
+    color: var(--clr1);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 0rem;
+    cursor: pointer;
+    width: 5rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    box-shadow: inset 0px 0px 10px 1px var(--clr1);
+    transition: 0.1s;
+
+
+    &:hover {
+        background-color: #a3c11cc0;
+        scale: 1.01;
+    }
+
+}
+
+/* --------------------------------------- */
+
+.todo-list-container {
+    width: 100%;
+    border-bottom: solid 1px var(--clr2);
+    padding-bottom: 1rem;
+    /* padding: 0px 20px; */
+}
+
+.todo-list-container ul {
+    list-style-type: square;
+    /* padding: 0; */
+    /* margin: 0; */
+    width: 100%;
+    /* background-color: antiquewhite; */
+
+}
+
+.todo-list-container ul li {
+    /* background-color: var(--clr3); */
+    margin-top: 1rem;
+    color: var(--clr1);
+    font-weight: 600;
+    width: 100%;
+    /* background-color: antiquewhite; */
+    display: flex;
+    /* flex-direction: column; */
+    gap: 0.7rem;
+
+}
+
+.todo-list-container>ul>li>p {
+    background-color: var(--clr3);
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    /* text-wrap: wrap; */
+    width: inherit;
+    box-shadow: inset 0px 0px 10px 1px var(--clr1),
+        0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+
+
+}
+
+.todo-list-container>ul>li>button {
+    width: 5rem;
+    font-size: 1.2rem;
+    color: var(--clr3);
+    background-color: var(--clr4);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 2.5rem;
+    box-shadow: inset 0px 0px 10px 1px var(--clr1);
+    transition: 0.1s;
+
+    &:hover {
+        background-color: #e0e0e0a8;
+        scale: 1.01;
+    }
+}
+
+/* ------------------------------------- */
+.todo-footer>button {
+    display: block;
+}
+
+.todo-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #a2c11c; */
+
+}
+
+.todo-footer .clear-btn {
+    width: 8rem;
+    height: 2.5rem;
+    background-color: var(--clr3);
+    color: var(--clr1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 10px 1px var(--clr1);
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: 0.1s;
+    margin-top: 1rem;
+
+    &:hover {
+        background-color: #a3c11cc0;
+        scale: 1.01;
+    }
+
+}
+
+.todo-footer p {
+    color: #e0e0e07f;
+}
+
+.todo-footer p span {
+    color: var(--clr3);
+}
+
+.done {
+    text-decoration: line-through;
+    text-decoration-color: #a3c11c8b;
+    text-decoration-style: double;
+}
+
+.pending {
+    text-decoration: none;
+}
